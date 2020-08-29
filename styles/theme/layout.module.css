@@ -1,0 +1,8 @@
+.page {
+  --primary-color: #3291ff;
+  --secondary-color: #22bd22;
+  --ternary-color: #cf32ff;
+  --danger-color: #e60e15;
+  color: var(--font-color);
+  background: var(--bg-color);
+}

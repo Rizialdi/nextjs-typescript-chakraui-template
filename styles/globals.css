@@ -1,16 +1,28 @@
 html,
 body {
+  top: 0;
+  margin: 0 auto;
   padding: 0;
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 a {
-  color: inherit;
+  --color-blue: #3291ff;
+  color: var(--color-blue);
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+a:visited {
+  --color-purple: #be00ff;
+  color: var(--color-purple)
+}
+
+.main {
+  margin: 0 auto;
+  padding: 1rem;
 }
