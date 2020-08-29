@@ -1,7 +1,11 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-
+import { Button } from '@chakra-ui/core';
+import { BiSun, BiMoon } from 'react-icons/bi';
+import { Theme } from './_app';
+import { useContext } from 'react';
 export default function Home() {
+  const [isLightValue, setIsLight] = useContext(Theme);
   return (
     <div className={styles.container}>
       <Head>
@@ -15,9 +19,15 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
+          Change the theme by clicking{' '}
+          <Button onClick={() => setIsLight(!isLightValue)}>
+            {isLightValue ? <BiSun /> : <BiMoon color="black" />}
+          </Button>{' '}
+          and Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
         </p>
+
+        <p className={styles.description}></p>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
